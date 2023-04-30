@@ -1,0 +1,255 @@
+.navigation {
+  display: flex;
+  /*     border-bottom: solid white 1px;
+ */
+  width: auto;
+  max-width: 100vw;
+  height: 80px;
+  flex-direction: row;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  justify-content: end;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: #0b0b0b;
+}
+
+.navigation .symbols {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 100px;
+}
+
+.navigation .symbols a {
+  font-size: 3.5rem;
+  color: white;
+  text-decoration: none;
+  transition: font-family 10s ease;
+}
+
+.navigation .symbols a:hover {
+  font-family: "Hacked";
+}
+
+@keyframes fadeIn {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  height: calc(100vh - 80px);
+  width: 100%;
+  position: sticky;
+  top: 80px;
+  background-color: #0b0b0b;
+  animation: 1s fadeIn;
+  animation-fill-mode: forwards;
+  z-index: 9999;
+  visibility: hidden;
+}
+
+.link {
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  text-decoration: none;
+  width: 100%;
+  max-width: 100vw;
+}
+
+.link:hover {
+  color: var(--light-red);
+}
+
+.link:hover:before {
+  transition: width 800ms ease;
+  width: 100%;
+}
+
+.link:before {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--red) var(--light-red-percent),
+    var(--light-red)
+  );
+  content: "";
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 0%;
+  position: absolute;
+}
+
+.link:nth-child(3) {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.link p {
+  font-size: 2rem;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    border-top: solid 1px white;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto;
+    position: sticky;
+    top: 80px;
+    background-color: black;
+  }
+  .link {
+    border-top: none;
+    color: white;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    max-width: 100vw;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .link:hover {
+    color: var(--light-red);
+  }
+
+  .link:hover:before {
+    transition: width 800ms ease;
+    width: 100%;
+  }
+
+  .link:before {
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      var(--red) var(--light-red-percent),
+      var(--light-red)
+    );
+    content: "";
+    left: 0px;
+    top: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+  }
+
+  .link:nth-child(1) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .link:nth-child(2) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+  .link:nth-child(3) {
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: none;
+  }
+  .link:nth-child(4) {
+    border-bottom: none;
+  }
+
+  .link p {
+    font-size: 1.5rem;
+    padding-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes to-close-icon {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+    rotate: calc(var(--rotation));
+  }
+  100% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+}
+@keyframes to-open-icon {
+  0% {
+    stroke-dashoffset: 0;
+    rotate: var(--rotation);
+  }
+  40% {
+    stroke-dashoffset: 79.9;
+    rotate: var(--rotation);
+  }
+  60% {
+    stroke-dashoffset: 79.9;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+button {
+  background: transparent;
+  border: none;
+  border-radius: 1rem;
+  align-self: flex-end;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.button-three {
+  --button-color: white;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.button-three :hover{
+  --button-color: var(--light-red);
+  overflow: hidden;
+  background-color: transparent;
+}
+
+
+.button-three .hamburger {
+  transition: translate 1s, rotate 1s;
+}
+
+.button-three[aria-expanded="true"] .hamburger {
+  translate: 10px -10px;
+  rotate: 0.125turn;
+}
+
+.button-three .line {
+  transition: 1s;
+  stroke-dasharray: 60 31 60 300;
+}
+
+.button-three[aria-expanded="true"] .line {
+  stroke-dasharray: 60 105 60 300;
+  stroke-dashoffset: -90;
+}

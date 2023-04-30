@@ -1,0 +1,127 @@
+input,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-container h1 {
+    padding-left: 10%;
+  }
+
+.form-container {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 80%;
+    height: 80vh;
+
+}
+
+textarea,
+input:focus {
+  outline: none;
+  padding: 5px;
+}
+
+textarea{
+    min-height: 200px;
+}
+
+.input {
+  font-family: monospace;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(58, 58, 58);
+  color: var(--red);
+  transition: all ease-in-out 0.2s;
+  border: none;
+  min-width: 80%;
+}
+
+.input:hover {
+  -webkit-box-shadow: 0px 0px 15px 5px #20c20e;
+  box-shadow: 0px 0px 15px 5px #20c20e;
+}
+
+.mail-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.msg-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.mail-cont label {
+  margin-bottom: 5px;
+  font-family: Hacked;
+  font-size: 2rem;
+}
+
+.msg-cont label {
+  margin-bottom: 5px;
+  font-family: Hacked;
+  font-size: 2rem;
+
+}
+
+.form-btn {
+  background-color: rgb(58, 58, 58);
+  color: white;
+  padding: 6px;
+  font-family: Hacked;
+  transition: all 0.3s ease-in-out;
+  width: 50%;
+  justify-self: center;
+  align-self: center; 
+}
+
+.form-btn:hover {
+  color: white;
+  padding: 6px;
+  font-family: Hacked;
+  border: 1px;
+  -webkit-box-shadow: 0px 0px 15px 5px #20c20e;
+  box-shadow: 0px 0px 15px 5px #20c20e;
+  color: #20c20e;
+}
+
+
+.bottom{
+  justify-self: end;
+  align-self: center;
+}

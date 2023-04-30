@@ -1,0 +1,60 @@
+.expertise-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.taginput-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.taginput-wrapper svg {
+  margin-left: 10px;
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto;
+}
+
+#quote {
+  text-align: center;
+  font-size:2rem;
+}
+#quotestyle {
+  font-size: 1.5rem;
+  font-style: italic;
+}
+
+@media screen and (max-width: 992px) {
+  .skills {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #quote {
+    text-align: center;
+    font-size: .9rem;
+  }
+  #quotestyle {
+    font-style: italic;
+  }
+}

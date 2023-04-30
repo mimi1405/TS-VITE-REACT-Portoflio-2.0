@@ -1,0 +1,47 @@
+.projects-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  justify-self: center;
+}
+
+.projects-container h1 {
+  padding-left: 10%;
+  font-size: 3rem;
+  margin-bottom: 50px;
+}
+
+#title {
+  font-family: "Hacked";
+  color: var(--red);
+}
+
+.searchbar-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.fadeprojects{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  justify-items: center;
+  align-content: center;
+}

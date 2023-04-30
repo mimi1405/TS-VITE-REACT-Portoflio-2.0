@@ -1,0 +1,8 @@
+.skill{
+    color: var(--red);
+    font-size: 1.2rem;
+    margin-right: 10px;
+    border: .1px solid var(--light-red);
+    border-radius: 5px;
+    padding: 5px;
+}

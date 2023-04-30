@@ -1,0 +1,27 @@
+.iconwrapper {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  height: auto;
+  padding: 20px;
+}
+.iconwrapper a {
+  text-decoration: none;
+}
+.github {
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  fill: white;
+}
+.web {
+  height: 30px;
+  width: 30px;
+}
+
+.github:hover {
+  fill: var(--red);
+}
+.web:hover {
+  color: var(--red);
+}
