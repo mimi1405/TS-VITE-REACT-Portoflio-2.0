@@ -5,7 +5,7 @@ import Footer from "../../components/Footer/Footer";
 import useSkills from "./useSkills/useSkills";
 import TauriIcon from "../../assets/img/Skills/Tauri.png";
 import Rust from "../../assets/img/Skills/Rust.png";
-import Scrum from "../../assets/img/Skills/scrum.png";
+import Scrum from "../../assets/img/Skills/Scrum.png";
 import Iperka from "../../assets/img/Skills/Iperka.png";
 import Cypress from "../../assets/img/Skills/Cypress.jpg";
 import UML from "../../assets/img/Skills/uml.png";
