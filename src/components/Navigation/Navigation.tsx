@@ -1,11 +1,11 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from "./Navbar";
 import "./Navigation.css";
 
 const Navigation = () => {
   const [open, setOpen] = useState(false);
   const [hovered, setHovered] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   const unfreezeScrolling = () => {
     const body = document.body;
@@ -14,11 +14,11 @@ const Navigation = () => {
 
   useEffect(() => {
     setHovered(true);
-    const button = document.querySelector<HTMLButtonElement>("button");
-
-    button?.addEventListener("click", () => {
+    const button = buttonRef.current;
+  
+    function handleClick() {
       const currentState = button?.getAttribute("data-state");
-
+  
       if (!currentState || currentState === "closed") {
         button?.setAttribute("data-state", "opened");
         button?.setAttribute("aria-expanded", "true");
@@ -29,24 +29,23 @@ const Navigation = () => {
         setOpen(false);
         unfreezeScrolling();
       }
-    });
+    }
+  
+    button?.addEventListener("click", handleClick);
+  
+    return () => {
+      button?.removeEventListener("click", handleClick);
+    };
   }, [hovered]);
+  
 
   const closeMobileMenu = () => {
-    const button = document.querySelector<HTMLButtonElement>("button");
+    const button = buttonRef.current;
     button?.setAttribute("data-state", "closed");
     button?.setAttribute("aria-expanded", "false");
     setOpen(false);
     unfreezeScrolling();
   };
-
-  function close() {
-    if (open === true) {
-      setOpen(!open);
-    } else {
-      null;
-    }
-  }
 
   return (
     <>
@@ -55,6 +54,7 @@ const Navigation = () => {
           className="button-three"
           aria-controls="primary-navigation"
           aria-expanded="false"
+          ref={buttonRef}
         >
           <svg
             stroke="var(--button-color)"
