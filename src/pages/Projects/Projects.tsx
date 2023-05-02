@@ -26,7 +26,7 @@ const Projects = () => {
                 title="stacija-art.com"
                 images={[Stacija, Sc, ScTwo]}
                 languages={["Javascript", "HTML5", "CSS3", "React", "Vite"]}
-                description="Personal portfolio for a artist with a complex frontend-design, lots of animations and colours.
+                description="Personal portfolio for an artist with a complex frontend-design, lots of animations and colours.
             We've worked together agile to find the most suitable, individual and efficient solution for her."
                 githubLink="https://github.com/mimi1405/stacija"
                 weblink="https://stacija-art.com/"

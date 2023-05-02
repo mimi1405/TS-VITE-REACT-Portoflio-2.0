@@ -57,7 +57,7 @@ const Home = () => {
           </div>
           <p>
             I'm a {calculateAge()} year old student. <br /> My passion is programming. No
-            matter what. <br />  <br /> <br /> In 2019 I started to attend the computer
+            matter what. <br />  <br /> <br /> In 2020 I started to attend the computer
             science middle school. Started with IT basics and now going on with
             more complex programming <Link id="projectslink" to="/projects">projects</Link> behind me.
           </p>
