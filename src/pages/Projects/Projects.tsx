@@ -10,6 +10,13 @@ import Soulchannel from "../../assets/img/ProjectThumbNails/tsc.png";
 import Memory from "../../assets/img/ProjectThumbNails/memory.png";
 import M from "../../assets/img/Icons/mstile-310x310.png";
 import PicFlip from "../../assets/img/ProjectThumbNails/picflip.png";
+import GratisWasserLogo from "../../assets/img/ProjectThumbNails/gratiswasser/logo.png";
+import GratisWasserUIBlank from "../../assets/img/ProjectThumbNails/gratiswasser/ui-blank.png";
+import GratisWasserUIFilled from "../../assets/img/ProjectThumbNails/gratiswasser/ui-filled.png";
+import GlasflexLogo from "../../assets/img/ProjectThumbNails/glasflex/logo.png";
+import GlasflexUIReferences from "../../assets/img/ProjectThumbNails/glasflex/ui-references.png";
+import GlasflexUIStrengths from "../../assets/img/ProjectThumbNails/glasflex/ui-strengths.png";
+
 import { Slide, Fade } from "react-awesome-reveal";
 
 const Projects = () => {
@@ -23,13 +30,33 @@ const Projects = () => {
           <Fade className="fadeprojects">
             <Slide direction="left" triggerOnce className="fadeprojects">
               <Project
+                  title="GratisWasser Kampagnenplaner"
+                  images={[GratisWasserLogo, GratisWasserUIFilled, GratisWasserUIBlank]}
+                  languages={["Typescript", "Solid", "Java 21", "Spring Boot"]}
+                  description="Campaign planning system for the marketing area. Combined with a CRUD backend system to manage the tool. I worked agile together with Gaël (Co-Founder) to find the best solution."
+                  githubLink=""
+                  weblink="https://kampagnenplaner-gratiswasser.com"
+              />
+            </Slide>
+            <Slide direction="right" triggerOnce className="fadeprojects">
+              <Project
+                  title="Glasflex.ch GmbH Website"
+                  images={[GlasflexLogo, GlasflexUIReferences, GlasflexUIStrengths]}
+                  languages={["Typescript", "React"]}
+                  description="Marketing / Landing page of a glas-repair-service startup."
+                  githubLink=""
+                  weblink="https://glasflex.ch/"
+              />
+            </Slide>
+            <Slide direction="left" triggerOnce className="fadeprojects">
+              <Project
                 title="stacija-art.com"
                 images={[Stacija, Sc, ScTwo]}
-                languages={["Javascript", "HTML5", "CSS3", "React", "Vite"]}
+                languages={["Javascript", "React"]}
                 description="Personal portfolio for an artist with a complex frontend-design, lots of animations and colours.
             We've worked together agile to find the most suitable, individual and efficient solution for her."
-                githubLink="https://github.com/mimi1405/stacija"
-                weblink="https://stacija-art.com/"
+                githubLink=""
+                weblink=""
               />
             </Slide>
             <Slide direction="right" triggerOnce className="fadeprojects">
@@ -45,7 +72,7 @@ const Projects = () => {
               <Project
                 title="PicFlip!"
                 images={[PicFlip]}
-                languages={["Typescript", "React", "Vite", "Tauri", "Rust"]}
+                languages={["Typescript", "React", "Tauri", "Rust"]}
                 description="A free imageconverter for the macOS with drag and drop feature.
             macOS is the drag & drop system itself!
             The perfect tool for fast and efficient image conversion on a Mac.
@@ -57,9 +84,9 @@ const Projects = () => {
               <Project
                 title="the-soul-channel.de"
                 images={[Soulchannel]}
-                languages={["Javascript", "React", "Vite", "HTML5", "CSS3"]}
+                languages={["Javascript", "React"]}
                 description="A static website for the services of a life-coach! Cool parallax effects and a custom design. We've worked agile and were done fast."
-                githubLink="https://github.com/mimi1405/PicFlip"
+                githubLink=""
                 weblink="https://the-soul-channel.de/"
               />
             </Slide>
@@ -76,7 +103,7 @@ const Projects = () => {
               <Project
                 title="This site"
                 images={[M]}
-                languages={["Typescript", "React", "Vite", "HTML5", "CSS3"]}
+                languages={["Typescript", "React"]}
                 description="This site here is actually my first typescript project for production. It is a remake of my old one with a much better UI-Design, some frontend-logic for interaction and with updated projects to show off my current skills."
                 githubLink="https://github.com/mimi1405/TS-VITE-REACT-Portoflio-2.0"
               />

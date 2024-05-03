@@ -12,10 +12,10 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ githubLink, weblink }) => {
   return weblink ? (
     <>
       <div className="iconwrapper">
-        <a href={githubLink}>
+        <a title={githubLink = "" ? "Not available currently." : githubLink} target={"_blank"} href={githubLink}>
           <AiFillGithub className="github" />
         </a>
-        <a href={weblink}>
+        <a title={weblink} target={"_blank"} href={weblink}>
           <FiLink className="web" />
         </a>
       </div>
@@ -23,7 +23,7 @@ const ProjectLink: React.FC<ProjectLinkProps> = ({ githubLink, weblink }) => {
   ) : (
     <>
       <div className="iconwrapper">
-        <a href={githubLink}>
+        <a target={"_blank"} href={githubLink}>
           <AiFillGithub className="github" />
         </a>
       </div>

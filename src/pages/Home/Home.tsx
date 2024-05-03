@@ -56,8 +56,8 @@ const Home = () => {
             <img alt="Image of the portfoliocreator" id="me" src={Me} />
           </div>
           <p>
-            I'm a {calculateAge()} year old student. <br /> My passion is programming. No
-            matter what. <br />  <br /> <br /> In 2020 I started to attend the computer
+            I'm a {calculateAge()} year old programmer. <br /> My passion is programming. I love interactivity-rich systems for fetching, mutating, and rendering data effectively.
+            <br />  <br /> <br /> In 2020 I started to attend the computer
             science middle school. Started with IT basics and now going on with
             more complex programming <Link id="projectslink" to="/projects">projects</Link> behind me.
           </p>
@@ -68,14 +68,13 @@ const Home = () => {
           &lt;<span id="name">Reach Me</span>/&gt;
         </h1>
         <div>
-          <a href="https://github.com/mimi1405">
+          <a target={"_blank"} href="https://github.com/mimi1405">
             <AiFillGithub size={75} />
           </a>
-          <a href="https://www.linkedin.com/in/maksim-momcilovic-1b3a4624b">
+          <a target={"_blank"} href="https://www.linkedin.com/in/maksim-momcilovic">
             <AiFillLinkedin size={75} />
           </a>
         </div>
-
       </section>
       <Footer />
     </>

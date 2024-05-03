@@ -4,14 +4,10 @@ import SkillTagSystem from "../../components/SkillTagSystem/SkillTagSystem";
 import Footer from "../../components/Footer/Footer";
 import useSkills from "./useSkills/useSkills";
 import TauriIcon from "../../assets/img/Skills/tauri.png";
-import Rust from "../../assets/img/Skills/rust.png";
-import Scrum from "../../assets/img/Skills/scrum.png";
-import Iperka from "../../assets/img/Skills/iperka.png";
-import Cypress from "../../assets/img/Skills/cypress.jpg";
-import UML from "../../assets/img/Skills/uml.png";
 import Slide from "react-awesome-reveal";
 import { Select, SelectOption } from "../../components/Select/Select";
 import { Skill } from "../../components/Skill/Skill";
+
 const skills: Skill[] = [
   {
     name: "JavaScript",
@@ -22,12 +18,6 @@ const skills: Skill[] = [
     name: "TypeScript",
     categories: ["All", "Web", "Programming"],
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-  { name: "Rust", categories: ["All", "Programming"], icon: Rust },
-  {
-    name: "C#",
-    categories: ["All", "Web", "Programming"],
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
   },
   {
     name: "Java",
@@ -40,11 +30,6 @@ const skills: Skill[] = [
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
   },
   {
-    name: "Firebase",
-    categories: ["All", "Database", "NoSQL-Database"],
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg",
-  },
-  {
     name: "CSS3",
     categories: ["All", "Web"],
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
@@ -53,11 +38,6 @@ const skills: Skill[] = [
     name: "HTML5",
     categories: ["All", "Web"],
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    name: "WPF",
-    categories: ["All", "Desktop", "Programming", "GUI-Design"],
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/windows8/windows8-original.svg",
   },
   {
     name: "Tauri.js",
@@ -69,36 +49,10 @@ const skills: Skill[] = [
     categories: ["All", "Web", "Programming", "Backend"],
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   },
-  { name: "UML", categories: ["All", "Architecture"], icon: UML },
-  {
-    name: "SCRUM",
-    categories: ["All", "Projectmanagement", "Agile"],
-    icon: Scrum,
-  },
-  {
-    name: "IPERKA",
-    categories: ["All", "Projectmanagement", "Waterfall"],
-    icon: Iperka,
-  },
   {
     name: "React-Native",
     categories: ["All", "Mobile", "Programming"],
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
-  },
-  {
-    name: "Flutter",
-    categories: ["All", "Mobile", "Programming"],
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg",
-  },
-  {
-    name: "Dart",
-    categories: ["All", "Mobile", "Programming"],
-    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg",
-  },
-  {
-    name: "Cypress",
-    categories: ["All", "Web", "Testing", "Frontend"],
-    icon: Cypress,
   },
   {
     name: "React",
@@ -110,26 +64,35 @@ const skills: Skill[] = [
     categories: ["All", "Versioncontrol"],
     icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   },
+  {
+    name: "Spring Boot",
+    categories: ["All", "Web", "Programming", "Backend"],
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg",
+  },
+  {
+    name: "Angular",
+    categories: ["All", "Web", "Programming", "Frontend"],
+    icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg",
+  },
+  {
+   name: "Solid",
+   categories: ["All", "Web", "Programming", "Frontend"],
+   icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/solidjs/solidjs-original.svg",
+  },
 ];
 
 const options = [
   { label: "All", value: 1 },
   { label: "Web", value: 2 },
   { label: "Programming", value: 3 },
-  { label: "Projectmanagement", value: 4 },
-  { label: "Agile", value: 5 },
-  { label: "Waterfall", value: 6 },
-  { label: "Relational Database", value: 7 },
-  { label: "Database", value: 8 },
-  { label: "GUI-Design", value: 9 },
-  { label: "Architecture", value: 10 },
-  { label: "Mobile", value: 11 },
-  { label: "Desktop", value: 12 },
-  { label: "Frontend", value: 13 },
-  { label: "Backend", value: 14 },
-  { label: "Testing", value: 15 },
-  { label: "Versioncontrol", value: 16 },
-  { label: "NoSQL-Database", value: 17 }
+  { label: "Relational Database", value:4 },
+  { label: "Database", value:5 },
+  { label: "Mobile", value: 6 },
+  { label: "Desktop", value: 7 },
+  { label: "Frontend", value: 8 },
+  { label: "Backend", value: 9 },
+  { label: "Testing", value: 10 },
+  { label: "Versioncontrol", value: 11 },
 ];
 
 const Skills: React.FC = () => {
